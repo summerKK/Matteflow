@@ -4,6 +4,12 @@ Matteflow is a browser demo for editorial video layout: load a local video, isol
 
 It is a small standalone prototype built on top of [`@chenglou/pretext`](https://github.com/chenglou/pretext) for manual line layout, plus a lightweight matte pass for silhouette extraction. The result is not traditional rectangular text wrap. The text bends around a subject-shaped exclusion zone derived from the video frame itself.
 
+## Inspiration
+
+Matteflow is a recreation experiment inspired by this post:
+
+- [EsotericCofe on X](https://x.com/EsotericCofe/status/2038076140661932273)
+
 ## What It Does
 
 - Loads a local video file directly in the browser
@@ -27,7 +33,7 @@ Then:
 
 Plain or clean backgrounds work best because the foreground mask is estimated from color contrast, not from a full segmentation model.
 
-For a quick first run, this repo includes a sample clip at [`resource/dance.mp4`](./resource/dance.mp4).
+For a quick first run, this repo includes local sample videos at [`resource/demo.mp4`](./resource/demo.mp4) and [`resource/dance.mp4`](./resource/dance.mp4).
 
 ## Quick Start
 
@@ -57,16 +63,11 @@ npm test
 
 ## Sample Asset
 
-- Included demo file: [`resource/dance.mp4`](./resource/dance.mp4)
-- Source video: [YouTube](https://www.youtube.com/watch?v=M9IcZFo6CBM)
+- Included demo video: [`resource/demo.mp4`](./resource/demo.mp4)
+- Included sample clip: [`resource/dance.mp4`](./resource/dance.mp4)
+- Source video for `dance.mp4`: [YouTube](https://www.youtube.com/watch?v=M9IcZFo6CBM)
 
-The bundled `dance.mp4` is the sample clip used for local testing and README walkthroughs.
-
-## Inspiration
-
-Matteflow is a recreation experiment inspired by this post:
-
-- [EsotericCofe on X](https://x.com/EsotericCofe/status/2038076140661932273)
+The bundled `demo.mp4` is a ready-to-use showcase clip for quick local playback checks. The bundled `dance.mp4` is the sample clip used for local testing and README walkthroughs.
 
 ## Controls
 
@@ -98,6 +99,7 @@ The text is positioned line by line rather than relying on DOM text-wrap. `prete
 .
 ├── index.html
 ├── resource/
+│   ├── demo.mp4
 │   └── dance.mp4
 ├── src/
 │   ├── demo.js
@@ -133,4 +135,4 @@ The text is positioned line by line rather than relying on DOM text-wrap. `prete
 
 The code in this repository is licensed under the [MIT License](./LICENSE).
 
-The sample file [`resource/dance.mp4`](./resource/dance.mp4) is provided as a demo asset reference and is not covered by the MIT license for the codebase.
+The sample files [`resource/demo.mp4`](./resource/demo.mp4) and [`resource/dance.mp4`](./resource/dance.mp4) are provided as demo asset references and are not covered by the MIT license for the codebase.
